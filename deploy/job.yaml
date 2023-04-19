@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: example-managed-job
+  namespace: openshift-backplane-srep
+spec:
+  completions: 1
+  template:
+    metadata:
+      labels:
+        app: example-managed-job
+    spec:
+      containers:
+      - command:
+        - /job
+        image: quay.io/tnierman_openshift/example-managed-job:latest
+        imagePullPolicy: Always
+        name: job
+      restartPolicy: OnFailure
