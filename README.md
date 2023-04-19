@@ -1,7 +1,15 @@
 # Example Managed Jobs
 
+## Introduction
+This repository is intended to serve as a basic tutorial to creating Golang applications, specifically managed-jobs, that interact with Kubernetes clusters.
+
+In order to follow along:
+- Create a new repo in GitHub
+- Clone it to your local workstation
+- Follow the instructions below. Try to complete as many as you can without referencing the files provided here; but if you do get stuck, they can serve as a reference. The link to the next step is given [at the bottom of this page](#next-steps), if you'd like to skip ahead.
+
 ## Getting started
-Steps needed to initialize a containerized go project. These have already been completed for this branch, and the results are provided for reference
+These initial steps establish a containerized go project. Except where mentioned, most of these instructions should be copy/paste-able
 
 ### Go
 The following steps create a basic Golang project to build off of:
@@ -129,3 +137,8 @@ example-managed-job-pk4kj                             0/1     Completed   0     
 $ oc logs example-managed-job-pk4kj
 hello world
 ```
+
+## Next Steps
+After completing the basics here, it's recommended that you commit your changes and continue to the next step.
+
+[ ] Create a [basic Kubernets client](https://github.com/tnierman/example-managed-job/tree/basic_client)
