@@ -129,16 +129,16 @@ NOTE: If your job encounters an `ErrImagePull`, make sure the registry you pushe
 
 Verify the job ran successfully. For example
 ```bash
-$ oc get po
+$ oc get po -n openshift-backplane-cee
 NAME                                                  READY   STATUS      RESTARTS   AGE
 example-managed-job-pk4kj                             0/1     Completed   0          1m
 
 # Copy the pod name - it will be unique every time a new job is created
-$ oc logs example-managed-job-pk4kj
+$ oc logs example-managed-job-pk4kj -n openshift-backplane-cee
 hello world
 ```
 
 ## Next Steps
 After completing the basics here, it's recommended that you commit your changes and continue to the next step.
 
-[ ] Create a [basic Kubernets client](https://github.com/tnierman/example-managed-job/tree/basic_client)
+- [ ] Create a [basic Kubernets client](https://github.com/tnierman/example-managed-job/tree/basic_client)

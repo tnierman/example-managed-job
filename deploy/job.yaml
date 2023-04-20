@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: example-managed-job
-  namespace: openshift-backplane-srep
+  namespace: openshift-backplane-cee
 spec:
   completions: 1
   template:
