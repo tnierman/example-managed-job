@@ -56,10 +56,10 @@ The changes here include:
 
 This achieves a few things: 1) importing `log` instead of `fmt` lets us call the functions present in the `log` package, and 2) using `log`'s version of `Println` automatically prepends the date and time to the message you've passed to it. This will be useful to ensure the code we write remains performant. Finally, `"Building client"` is a more meaningful log when debugging than `"hello world"`
 
-> **NOTE**
+> **Note**
 > If you want to know more about the methods supplied by the log or fmt libraries, refer to their respective go.pkg.dev pages [here](https://pkg.go.dev/log) and [here](https://pkg.go.dev/fmt)
 
-> **NOTE**
+> **Note**
 > It's wise to periodically run your code as you follow along. The easiest way to do this is invoking `go run main.go` from the root directory (same directory as your `go.mod`) of your project
 
 
@@ -98,7 +98,7 @@ A few things had to happen to instantiate our client:
   - `err` determines whether the `New()` function actually succeeded or not. By checking if `err != nil`, we're checking if an error was returned, and, if so, we're logging it and exiting.
 - Finally, in order for this Go code to be valid, every variable we declare has to be used in some way. Usually, the easiest way to ensure this happens during development is to print its value - thus `Printf()`. We're using `Printf` instead of `Println()` so that we can use [formatting verbs](https://pkg.go.dev/fmt#hdr-Printing) to see what's currently defined within the `client` object. (This is also why `fmt` had to be re-imported)
 
-> **NOTE**
+> **Note**
 > Before running the above code, make sure you're logged into a cluster you own. You may also have to run `go mod tidy` to download the dependencies used by this code.
 
 Finally, lets use the client to retrieve some data from the cluster:
@@ -210,7 +210,7 @@ Since we're making managed-jobs, we need to make sure this code runs properly _i
 
 First, lets rebuild our docker image. To do this, we need to add `COPY go.sum go.sum` to the previously generated [Dockerfile](./Dockerfile). This wasn't included in the previous step, because go.sum files are only created after an [external dependency is used](https://go.dev/blog/using-go-modules#adding-a-dependency). After doing that, run the following:
 
-> **NOTE**
+> **Note**
 > Be sure to replace the quay.io user in the below commands to reference yourself
 
 ```bash
