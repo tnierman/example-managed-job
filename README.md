@@ -3,7 +3,7 @@
 ## Introduction
 The following tutorial creates a basic client in Golang using Kubernetes' Go API. It's recommended you complete this at least once, then use this as a base branch for future steps.
 
-Since this and future sections involve a heavier emphasis on Go, the following steps involve editing files directly, instead of using heredocs to generate them from the command line. The final product created in this section is included, for reference.
+Since this and future sections place a heavier emphasis on writing Go, the following steps involve editing files directly instead of using heredocs to generate them from the command line. The final product created in this section is included, for reference.
 
 ## Instructions
 
@@ -27,7 +27,7 @@ To break this down:
 - `func main() {...}` - Represents the `main` function. The `main` function is where every Go program starts executing from.
 - `fmt.Println("hello world")` - Uses the standard `fmt` package to print "hello world" to your console.
 
-Since this tutorial is geared specifically toward creating managed-jobs, we won't spend much time covering the basics of Go. If at any time the syntax or behavior of the Go code below feels unfamiliar, _stop_! In order to build effective Go programs, at least a basic understanding of the language, and the tools it provides, is needed. There are numerous tutorials online that iterate on examples like the one above to gradually cover everything from the most basic syntax to the most advanced concepts.
+Since this tutorial is geared specifically toward creating managed-jobs, we won't spend much time covering the basics of Go. If at any time the syntax or behavior of the Go code below feels unfamiliar, _stop_! In order to build effective Go programs, you need, at a minimum, a basic understanding of the language and the tools it provides. There are numerous tutorials online that build on simple programs like the one above to gradually cover everything from the most basic syntax to the most advanced concepts.
 
 If you need somewhere to start, a (very) short list:
 - [A Tour of Go](https://go.dev/tour/welcome/1) - Walks you step-by-step through the Go documentation
