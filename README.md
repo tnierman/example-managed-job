@@ -264,6 +264,6 @@ If it doesn't, make sure the job was deployed to the `openshift-backplane-cee` (
 ## Next steps
 If you were able to retrieve similar output from your test job, then use the following link to reach the next step.
 
-- [ ] [Roll a deployment]()
+- [ ] [Roll a deployment](https://github.com/tnierman/example-managed-job/blob/roll_deployment/README.md)
 
 **If you were not**, you likely will not be able to complete the next step, since it iterates on the existing codebase. Keep trying! Sometimes the best way to learn something is to bang your head against your desk :)
