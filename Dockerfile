@@ -4,7 +4,7 @@ WORKDIR /workspace
 
 # Copy Go Module manifest & dependency files
 COPY go.mod go.mod
-#COPY go.sum go.sum
+COPY go.sum go.sum
 
 # Install deps
 RUN go mod download
