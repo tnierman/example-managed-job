@@ -145,8 +145,8 @@ A lot more has changed from before, so to break things down one last time:
 - A log message was added, indicating that the `client` was created successfully.
 - To keep our output concise, the `fmt.Printf()` line was removed. This is allowed, because `client` is now used later to `List()` some stuff.
 - Now, the good stuff: first we're initializing a new variable, `pods`, which is a [PodList](https://pkg.go.dev/k8s.io/api/core/v1#PodList). A `PodList` isn't something you've probably seen if you haven't worked with Kubernetes APIs before - it's how our `client` is able work with multiple `Pod` objects at once.
-- Next, we're using our `client` to `List()` pods: in order to do that we need to pass it a `context` (we just use `TODO()` here), the `PodList` we just created, and some options. This time, we will specify some options: specifically that we want to see pods in the `openshift-kube-apiserver` namespace.
-- Then, we're checking our error again, to make sure the `List()` succeeded. If it doesn't we log why and exit.
+- Next, we're using our `client` to `List()` pods: in order to do that we need to pass it a `context` (we just use `TODO()` here), the `PodList` we just created, and some options. This time, we do specify some options: specifically that we want to see pods in the `openshift-kube-apiserver` namespace. All the different options we could've also specified are [here](https://pkg.go.dev/sigs.k8s.io/controller-runtime/pkg/client#ListOptions).
+- Then, we're checking our error again, to make sure the `List()` succeeded. If it doesn't, we log why and exit.
 - Finally, we print out the pods we found in `openshift-kube-apiserver`
 
 Hopefully, when you run this file, the output looks similar to:
@@ -208,7 +208,7 @@ If so, this indicates that the Go worked, and that you've successfully created a
 Since we're making managed-jobs, we need to make sure this code runs properly _in_ the cluster. Using the resources created in the previous step, this shouldn't be too hard:
 
 
-First, lets rebuild our docker image. To do this, we need to add `COPY go.sum go.sum` to the previously generated [Dockerfile](./Dockerfile). This wasn't included in the previous step, because go.sum files are only created after an [external dependency is used](https://go.dev/blog/using-go-modules#adding-a-dependency). After doing that, run the following:
+First, lets rebuild our docker image. To do this, we need to add `COPY go.sum go.sum` to the previously generated Dockerfile. Refer to the current [Dockerfile](./Dockerfile#L7) for clarity. This wasn't included in the previous step, because go.sum files are only created after an [external dependency is used](https://go.dev/blog/using-go-modules#adding-a-dependency). After doing that, run the following:
 
 > **Note**
 > Be sure to replace the quay.io user in the below commands to reference yourself
