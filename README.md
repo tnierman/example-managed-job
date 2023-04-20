@@ -36,6 +36,7 @@ If you need somewhere to start, a (very) short list:
 
 One tool worth calling out in particular is https://pkg.go.dev: this site acts as a reference for many of the Go packages we'll be importing, and can be invaluable when working with unfamiliar methods or types.
 
+---
 
 As a first step, lets modify the existing `Println` in a few ways:
 
